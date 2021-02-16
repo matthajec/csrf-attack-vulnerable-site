@@ -1,0 +1,4 @@
+# CSRF Vulnerable Site
+This is a "playground" I used to test CSRF vulnerabilities. The sever serves a basic banking website, with a "login" and "send money" page. Once the user logs in they have a cookie pointing to an authenticated session on the server. Since there's nothing protecting the user from CSRF (except maybe a few browsers if they assume the SameSite attribute to be strict/lax) the cookie will be sent alongside the fake request and processed exactly like as if the request originated from the real site. To fix this vulnerabilty I would just embed a CSRF token into the form, setting the SameSite attribute as mentioned above won't work on a lot of browsers, so it's not a good defense.
+
+The username is ```username``` and the password is ```password```
