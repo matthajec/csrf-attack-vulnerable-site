@@ -1,0 +1,19 @@
+<%- include('./partials/head.ejs') %>
+  <form class="w-50 m-auto border border-dark p-4 rounded" action="/" method="POST">
+    <% if(failed) { %>
+      <div class="alert alert-danger" role="alert">
+        Bad Credentials
+      </div>    
+    <% } %>
+    <h2>Log In</h2>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input name="username" class="form-control" id="username" placeholder="Enter Username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+<%- include('partials/footer.ejs') %>

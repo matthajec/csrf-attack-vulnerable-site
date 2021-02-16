@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Banking Site</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-4 mb-4">Fake Banking Site</h1>
+      <form action="/log-out" method="POST">
+        <button type="sumbit" class="btn btn-primary">Log Out</button>
+      </form>
+      <form class="w-50 m-auto border border-dark p-4 rounded" action="http://localhost:3000/send-money" method="POST">
+        <h2>Send Money</h2>
+        <div class="form-group">
+          <label for="accountNumber">Account Number</label>
+          <input name="accountNumber" class="form-control" id="accountNumber"placeholder="Enter Receipient">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount ($)</label>
+          <input name="amount" class="form-control" id="amount" placeholder="Enter Amount">
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+
+    <script>
+      // script that can scrape data about the transaction, or even send its own request, the point is that the server didn't verify the request came from a legit source (so you could build a page that successfully transfers money in the background as long as you can get them on your site)
+    </script>
+  </body>
+</html>
